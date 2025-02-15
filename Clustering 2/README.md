@@ -1,7 +1,7 @@
 # Clustering Project 2: Wine Clustering
 
 ## Overview
-This project aims to cluster various types of wine based on their chemical attributes, such as **Alcohol, Malic Acid, Ash, Magnesium, Total Phenols, Flavanoids, Color Intensity, Proline**, and more. By grouping wines with similar characteristics, we can provide **actionable insights** for wine sellers, connoisseurs, and enthusiasts, helping them identify and compare wines with ease.
+This project aims to cluster various types of wine based on their chemical attributes, such as **Alcohol, Malic Acid, Ash, Magnesium, Total Phenols, Flavanoids, Color Intensity, Proline**, and more. By grouping wines with similar characteristics, we can provide **actionable insights** for wine sellers, gourmets, and enthusiasts, helping them identify and compare wines with ease.
 
 ---
 
