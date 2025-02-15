@@ -21,6 +21,15 @@ The primary intention of this repository is to:
   - **Visualization**: Plotting clusters and cluster centroids for better interpretability.
   - **UMAP**: Used UMAP method to get a representation of our data in a smaller dimension.
 
+### Project 2: [Wine Clustering]
+**Description**: Wine clustering project based on some attributes of them.
+  
+**Techniques Used**:
+  - **Clustering Algorithm**: K-means
+  - **Evaluation Metrics**: Silhouette score etc.
+  - **Visualization**: Plotting clusters and cluster centroids for better interpretability.
+  - **PCA**: Used PCA method to get a representation of our data in a smaller dimension and visualize it better. 
+
 
 
 
