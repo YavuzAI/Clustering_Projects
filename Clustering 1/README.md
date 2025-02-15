@@ -34,26 +34,21 @@ Here is the dataframe format of what we obtained with umap:
 ---
 
 ### 3.Elbow method and silhouette score 
-- **Model Selection**: We experimented with multiple classification algorithms (e.g., Logistic Regression, SVM, Random Forest). Random Forest gave the most promising initial results.
-- **Hyperparameter Optimization**: We used Grid Search to fine-tune parameters such as `n_estimators`, `max_depth`, and more.
-  
-  ![Parameters](screenshots/parameters.png)
+Elbow method tells me to choose 4 as the number of clusters for the k means algorithm
+![UMAP]{screenshots/elbow.png}
 
 ---
 
 ### 4. Results
-- **Final Model**: After applying the optimized hyperparameters to the entire dataset, our Random Forest model achieved an accuracy of **~80%** on the private leaderboard of Kaggle.
-- **Significance**: This performance is notable given the high dimensionality and relatively small sample size.
+In the images we can see that our data is separated first in 2D space (umap n_components=2) and the second image in 3 D space (umap n_components=3)
+2D:
+![UMAP]{screenshots/2D.png}
+3D:
+![UMAP]{screenshots/3D.png}
 
 ---
 
 ## Conclusion
 
-By combining **correlation-based feature filtering**, **comprehensive data visualization**, and a **hyperparameter-tuned Random Forest**, we effectively tackled a complex, high-dimensional dataset to predict Schizophrenia with solid accuracy. 
-
-**Potential Next Steps**  
-- **Further Dimensionality Reduction**: Techniques like PCA or autoencoders may uncover more compact representations.  
-- **Advanced Models**: Exploring deep learning architectures could improve performance further.  
-- **Data Expansion**: Collecting additional samples or leveraging domain knowledge may help refine model accuracy and interpretability.
 
 
