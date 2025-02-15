@@ -19,7 +19,7 @@ UMAP (Uniform Manifold Approximation and Projection) was used to reduce the data
 **Key Benefits of UMAP in Clustering**:
 1. **Dimensionality Reduction**: Compresses high-dimensional data into fewer dimensions while retaining essential structure.
 2. **Noise Filtering**: Focuses on the most relevant features, filtering out extraneous noise and improving clustering performance.
-3. **Improved Clustering**: Mitigates the “curse of dimensionality,” leading to more cohesive clusters.
+3. **Improved Clustering**: Mitigates the “curse of dimensionality,” leading to more cohesive/connected clusters.
 4. **Enhanced Visualization**: Facilitates easy interpretation by projecting data onto 2D or 3D spaces.
 5. **Better Interpretability**: Clusters in a reduced dimension are easier to analyze, making the insights more actionable.
 
