@@ -14,17 +14,26 @@ describe() method expalins the data and i see that our data points are close wit
 
 Clustering alogrithms may be snesitive to differnet scales in the data and we plan to feeed our data to k means alogirthm  scaling beforehand can help maintain consistency across your workflow.
 
----
-
-### 2. Data Visualization
-- **Matplotlib & Seaborn**: We created various plots (e.g., histograms, pair plots, correlation heatmaps) using `plt.subplots()` and Seaborn functions.
-- **Insights**: These visualizations provided a clearer picture of feature distributions and relationships within the data.
-
-![Plots](screenshots/plot_w_sns_plt.png)
 
 ---
 
-### 3. Grid Search for Model Tuning
+### 2. Umap implemenatiton 
+#### Key Benefits of Using UMAP in Clustering
+
+Dimensionality Reduction: UMAP reduces the number of features in your dataset while preserving the relationships between data points, allowing for more effective clustering.
+Noise Filtering: By focusing on the most relevant features, UMAP helps filter out noise and irrelevant data, enhancing the performance of clustering algorithms like K-Means.
+Improved Clustering Performance: Reducing dimensionality mitigates the "curse of dimensionality," leading to more meaningful clusters as the data becomes denser in lower dimensions.
+Enhanced Visualization: UMAP enables visualization of high-dimensional data in 2D or 3D, making it easier to interpret clustering results and understand data structure.
+Better Interpretability: Clusters formed in a lower-dimensional space are easier to analyze and interpret, ensuring that the results are more meaningful and actionable.
+I implenmented umap iwth 2 components, since further i plan to plot the clustered data in the 2D space. The data has to be represented in 2D space for this. 
+
+Here is the dataframe format of what we obtained with umap:
+![UMAP]{screenshots/umap.png}
+
+
+---
+
+### 3.Elbow method and silhouette score 
 - **Model Selection**: We experimented with multiple classification algorithms (e.g., Logistic Regression, SVM, Random Forest). Random Forest gave the most promising initial results.
 - **Hyperparameter Optimization**: We used Grid Search to fine-tune parameters such as `n_estimators`, `max_depth`, and more.
   
