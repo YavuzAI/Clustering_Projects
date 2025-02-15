@@ -16,10 +16,10 @@ The primary intention of this repository is to:
 **Description**: A project exploring how to cluster data points into meaningful groups using techniques like **K-means**.
   
 **Techniques Used**:
-  - **Data Preprocessing**: Handling missing values, scaling features, etc.
-  - **Clustering Algorithm**: K-means or DBSCAN, including hyperparameter tuning.
-  - **Evaluation Metrics**: Silhouette score, Davies-Bouldin index, etc.
+  - **Clustering Algorithm**: K-means
+  - **Evaluation Metrics**: Silhouette score etc.
   - **Visualization**: Plotting clusters and cluster centroids for better interpretability.
+  - **UMAP**: Used UMAP method to get a representation of our data in a smaller dimension.
 
 
 
