@@ -1,54 +1,55 @@
-# Clsutering Project 1 
+# Clustering Project 1
 
-## Overview 
-The data is hard to interpreet by human eye since it is just numbers with slightly high dimensionality. 
-We need to cluster this data with the best clustering method using k means algorithhm 
-data shape (98000, 30)
+## Overview
+This project aims to cluster a dataset of shape **(98,000 × 30)**, which consists purely of numeric features. Due to the relatively high dimensionality, the data is not easily interpretable by simple inspection. Our goal is to employ the **K-Means** algorithm to identify meaningful clusters, aided by **UMAP** for dimensionality reduction and visualization.
 
 ---
 
 ## Key Steps
 
-### 1. infering meaning from our data
-describe() method expalins the data and i see that our data points are close with a std of raning between 1 -4 but this does not mean that  the actual feature values do not differ significantly in magnitude. Since i am planning to apply umap, i need to scale my data, since UMAP (and many clustering algorithms) rely on distance metrics, scaling can help maintain the integrity of the clustering process by ensuring that the distances reflect the true relationships between data points.
-
-Clustering alogrithms may be snesitive to differnet scales in the data and we plan to feeed our data to k means alogirthm  scaling beforehand can help maintain consistency across your workflow.
-
+### 1. Inferring Meaning from the Data
+- **Descriptive Statistics**: We used `describe()` to examine the data. While the standard deviation ranged from 1 to 4, the absolute magnitudes of certain features could still overshadow others, potentially skewing distance-based methods like K-Means.
+- **Scaling**: To ensure each feature contributes equally, we scaled the data. Many clustering algorithms (and UMAP) rely on distance metrics, so scaling helps preserve the true relationships between data points.
 
 ---
 
-### 2. Umap implemenatiton 
-#### Key Benefits of Using UMAP in Clustering
+### 2. UMAP Implementation
+UMAP (Uniform Manifold Approximation and Projection) was used to reduce the dataset’s dimensionality before clustering.
 
-Dimensionality Reduction: UMAP reduces the number of features in your dataset while preserving the relationships between data points, allowing for more effective clustering.
-Noise Filtering: By focusing on the most relevant features, UMAP helps filter out noise and irrelevant data, enhancing the performance of clustering algorithms like K-Means.
-Improved Clustering Performance: Reducing dimensionality mitigates the "curse of dimensionality," leading to more meaningful clusters as the data becomes denser in lower dimensions.
-Enhanced Visualization: UMAP enables visualization of high-dimensional data in 2D or 3D, making it easier to interpret clustering results and understand data structure.
-Better Interpretability: Clusters formed in a lower-dimensional space are easier to analyze and interpret, ensuring that the results are more meaningful and actionable.
-I implenmented umap iwth 2 components, since further i plan to plot the clustered data in the 2D space. The data has to be represented in 2D space for this. 
+**Key Benefits of UMAP in Clustering**:
+1. **Dimensionality Reduction**: Compresses high-dimensional data into fewer dimensions while retaining essential structure.
+2. **Noise Filtering**: Focuses on the most relevant features, filtering out extraneous noise and improving clustering performance.
+3. **Improved Clustering**: Mitigates the “curse of dimensionality,” leading to more cohesive clusters.
+4. **Enhanced Visualization**: Facilitates easy interpretation by projecting data onto 2D or 3D spaces.
+5. **Better Interpretability**: Clusters in a reduced dimension are easier to analyze, making the insights more actionable.
 
-Here is the dataframe format of what we obtained with umap:
-![UMAP]{screenshots/umap.png}
+We implemented UMAP with `n_components=2` to facilitate 2D visualization:
 
+![UMAP](screenshots/umap.png)
 
 ---
 
-### 3.Elbow method and silhouette score 
-Elbow method tells me to choose 4 as the number of clusters for the k means algorithm
-![UMAP]{screenshots/elbow.png}
+### 3. Elbow Method and Silhouette Score
+To determine the optimal number of clusters for K-Means, we used:
+- **Elbow Method**: Indicated that **k=4** is an appropriate choice.
+- **Silhouette Score**: Provided additional confirmation of the quality and separation of the clusters.
+
+![Elbow Method](screenshots/elbow.png)
 
 ---
 
 ### 4. Results
-In the images we can see that our data is separated first in 2D space (umap n_components=2) and the second image in 3 D space (umap n_components=3)
-2D:
-![UMAP]{screenshots/2D.png}
-3D:
-![UMAP]{screenshots/3D.png}
+After applying UMAP for dimensionality reduction and K-Means for clustering, we visualized the results in both 2D and 3D:
+
+1. **2D Representation**  
+   ![2D Clusters](screenshots/2D.png)
+
+2. **3D Representation** (using `n_components=3`)  
+   ![3D Clusters](screenshots/3D.png)
+
+These plots show distinct clusters in the reduced dimensional space, indicating that K-Means successfully separated the data into meaningful groups.
 
 ---
 
 ## Conclusion
-
-
-
+By integrating **UMAP** for dimensionality reduction and **K-Means** for clustering, we were able to uncover coherent clusters within a high-dimensional dataset. **Scaling** the data was crucial to maintain the integrity of distance-based methods, and the **Elbow Method** combined with the **Silhouette Score** guided us to an optimal cluster count. This approach lays the foundation for further exploration, such as experimenting with alternative clustering algorithms or adjusting UMAP parameters to refine the representation of the data.
