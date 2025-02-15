@@ -25,7 +25,7 @@ UMAP (Uniform Manifold Approximation and Projection) was used to reduce the data
 
 We implemented UMAP with `n_components=2` to facilitate 2D visualization:
 
-![UMAP](screenshots/umap.png)
+![UMAP](screenshots/UMAP.png)
 
 ---
 
