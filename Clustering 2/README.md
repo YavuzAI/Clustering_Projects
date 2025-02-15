@@ -17,9 +17,8 @@ Based on these findings, we proceeded with **k = 4** clusters.
 
 ### 2. Fitting the K-Means Algorithm
 After deciding on **4 clusters**, we:
-1. **Scaled** the data (if necessary) to ensure each feature contributes fairly to distance calculations.  
-2. **Trained** a K-Means model to partition the wine data into 4 clusters.  
-3. **Predicted** cluster labels for each wine sample, allowing us to group wines by shared characteristics.
+1. **Trained** a K-Means model to partition the wine data into 4 clusters.  
+2. **Predicted** cluster labels for each wine sample, allowing us to group wines by shared characteristics.
 
 ---
 
